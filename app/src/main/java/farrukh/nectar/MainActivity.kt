@@ -3,13 +3,12 @@ package farrukh.nectar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import farrukh.nectar.adapter.DiscountAdapter
 import farrukh.nectar.adapter.Exclusive_Offer_Adapter
 import farrukh.nectar.databinding.ActivityMainBinding
 import farrukh.nectar.model.Discount
-import farrukh.nectar.model.Exclusive_Offer
+import farrukh.nectar.model.Exclusive_Offer_products_child
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun discounts():MutableList<Discount>{
+    fun discounts():MutableList<Discount>{
         var list = mutableListOf<Discount>()
 
         list.add(Discount("fresh vegetables","40% off",R.drawable.vegetaaa))
@@ -53,18 +52,18 @@ class MainActivity : AppCompatActivity() {
         return list
     }
 
-    private fun offers():MutableList<Exclusive_Offer>{
-        var list = mutableListOf<Exclusive_Offer>()
+    fun offers():MutableList<Exclusive_Offer_products_child>{
+        var list = mutableListOf<Exclusive_Offer_products_child>()
 
-        list.add(Exclusive_Offer("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer("Fresh tomato",4.99f,R.drawable.tomot))
-        list.add(Exclusive_Offer("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer("Fresh tomato",4.99f,R.drawable.tomot))
-        list.add(Exclusive_Offer("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
         return list
     }
 }

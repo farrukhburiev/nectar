@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="85dp"
+            android:id="@+id/img"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:src="@drawable/vegetaaa"
+            >
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:text="name"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gilroysemibold"
+
+            />
+        <TextView
+            android:id="@+id/price_real"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="25dp"
+            android:text="name"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gilroysemibold"
+
+            />
+
+        <TextView
+            android:id="@+id/ttt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gilroyregular"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="19dp" />
+
+        <ImageView
+            android:id="@+id/plus_in"
+            android:layout_width="40dp"
+
+            android:layout_marginStart="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/plus_in"
+            />
+
+        <ImageView
+            android:id="@+id/minus_in"
+            android:layout_width="40dp"
+
+            android:layout_marginStart="-50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/minus_in"
+            />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gilroyregular"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:text="" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
