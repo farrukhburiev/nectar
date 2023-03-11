@@ -1,11 +1,11 @@
 package farrukh.nectar
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import farrukh.nectar.adapter.DiscountAdapter
-import farrukh.nectar.adapter.Exclusive_Offer_Adapter
+import farrukh.nectar.adapter.CardAdapter
 import farrukh.nectar.databinding.ActivityCartBinding
+import farrukh.nectar.model.Cart_products
 import farrukh.nectar.model.Exclusive_Offer_products_child
 
 class CartActivity : AppCompatActivity() {
@@ -16,26 +16,48 @@ class CartActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        var adapter_offer = Exclusive_Offer_Adapter(offers())
-        var manager_offer = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
-        binding.recycleCart.layoutManager = manager_offer
-        binding.recycleCart.adapter = adapter_offer
+        var arrayAdapter = CardAdapter(this, offers(), object : CardAdapter.onchangeListner {
+            override fun onEdit(position: Int, item: Cart_products) {
+                var intent1 = Intent(this@CartActivity,DescriptionActivity::class.java)
+                intent1.putExtra("cart_food",item)
+//                intent1.putExtra("tag_cart",binding.cartConst.tag.toString())
+                startActivity(intent1)
+            }
+        })
+        binding.listViewCart.adapter = arrayAdapter
+        binding.myCart.setOnClickListener {
+            startActivity(Intent(this,DescriptionActivity::class.java))
+        }
 
+        binding.shop.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+        binding.explore.setOnClickListener {
+            startActivity(Intent(this,ExploreActivity::class.java))
+        }
+        binding.favourite.setOnClickListener {
+            startActivity(Intent(this,FavouriteActivity::class.java))
+        }
     }
 
 
-    fun offers():MutableList<Exclusive_Offer_products_child>{
-        var list = mutableListOf<Exclusive_Offer_products_child>()
+    fun offers(): MutableList<Cart_products> {
+        var list = mutableListOf<Cart_products>()
 
-        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
-        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
-        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
-        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
-        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
+        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
+        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
+        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
+        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
+        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
+        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
+        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
+        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
+        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
+        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
+        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
+        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
+
         return list
     }
 }

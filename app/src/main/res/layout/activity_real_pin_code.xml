@@ -56,6 +56,7 @@
         android:textStyle="bold"
         app:cursorColor="@color/teal_200"
         app:cursorWidth="2dp"
+
         app:hideLineWhenFilled="false"
         app:itemCount="4"
         app:itemHeight="48dp"

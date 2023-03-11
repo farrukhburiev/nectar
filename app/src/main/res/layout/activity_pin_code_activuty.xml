@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter">
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/login_org"
+        android:id="@+id/new_password"
         android:inputType="numberPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_org"
+            android:id="@+id/confirm_password"
             android:inputType="numberPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

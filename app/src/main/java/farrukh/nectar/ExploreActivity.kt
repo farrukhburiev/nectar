@@ -39,7 +39,7 @@ class ExploreActivity : AppCompatActivity() {
 
 
         shop.setOnClickListener {
-            startActivity(Intent(this,ExploreActivity::class.java))
+            startActivity(Intent(this,MainActivity::class.java))
         }
         cart.setOnClickListener {
             startActivity(Intent(this,CartActivity::class.java))

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">nectar</string>
+    <string name="choose">Get your groceries with nectar\nand choose your language</string>
+</resources>

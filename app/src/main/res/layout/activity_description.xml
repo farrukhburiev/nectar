@@ -6,4 +6,120 @@
     android:layout_height="match_parent"
     tools:context=".DescriptionActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titlejoyi"
+
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/main_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/heart_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.927"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/selected_item_img"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/banannnn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+
+        android:id="@+id/namae"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/gilroyregular"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlejoyi" />
+
+    <TextView
+        android:id="@+id/ttt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/number_back"
+        android:fontFamily="@font/gilroyregular"
+        android:padding="10dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/minus_in"
+        app:layout_constraintTop_toTopOf="@+id/minus_in" />
+
+    <ImageView
+        android:id="@+id/plus_in"
+        android:layout_width="40dp"
+
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/plus"
+        app:layout_constraintStart_toEndOf="@+id/ttt"
+        app:layout_constraintTop_toTopOf="@+id/ttt" />
+
+    <ImageView
+        android:id="@+id/minus_in"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/minus"
+        app:layout_constraintStart_toStartOf="@+id/namae"
+        app:layout_constraintTop_toBottomOf="@+id/namae" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/gilroyregular"
+        android:text="$"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/plus_in"
+        app:layout_constraintTop_toTopOf="@+id/plus_in" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/gilroyregular"
+        android:text="Add To Basket"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plus_in" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
