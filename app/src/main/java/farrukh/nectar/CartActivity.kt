@@ -17,10 +17,10 @@ class CartActivity : AppCompatActivity() {
 
 
         var arrayAdapter = CardAdapter(this, offers(), object : CardAdapter.onchangeListner {
-            override fun onEdit(position: Int, item: Cart_products) {
+            override fun onEdit(position: Int, item: Exclusive_Offer_products_child) {
                 var intent1 = Intent(this@CartActivity,DescriptionActivity::class.java)
-                intent1.putExtra("cart_food",item)
-//                intent1.putExtra("tag_cart",binding.cartConst.tag.toString())
+                intent1.putExtra("food",item)
+//                intent1.putExtra("tag",binding.mainConst.tag.toString())
                 startActivity(intent1)
             }
         })
@@ -41,23 +41,27 @@ class CartActivity : AppCompatActivity() {
     }
 
 
-    fun offers(): MutableList<Cart_products> {
-        var list = mutableListOf<Cart_products>()
+    fun offers(): MutableList<Exclusive_Offer_products_child> {
+       var list = mutableListOf<Exclusive_Offer_products_child>()
 
-        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
-        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
-        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
-        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
-        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
-        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
-        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
-        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
-        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
-        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
-        list.add(Cart_products("Red apple", 4.99f, R.drawable.applee))
-        list.add(Cart_products("Fresh tomato", 4.99f, R.drawable.tomot))
-        list.add(Cart_products("Organic bananas", 4.99f, R.drawable.banannnn))
-
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
+        list.add(Exclusive_Offer_products_child("Organic bananas",4.99f,R.drawable.banannnn))
+        list.add(Exclusive_Offer_products_child("Red apple",4.99f,R.drawable.applee))
+        list.add(Exclusive_Offer_products_child("Fresh tomato",4.99f,R.drawable.tomot))
         return list
     }
 }

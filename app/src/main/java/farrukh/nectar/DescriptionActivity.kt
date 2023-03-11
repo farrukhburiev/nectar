@@ -21,13 +21,14 @@ class DescriptionActivity : AppCompatActivity() {
 
         var food:Exclusive_Offer_products_child = intent.getSerializableExtra("food") as Exclusive_Offer_products_child
 //        var tag_main = intent.getStringExtra("tag_main")
-//        var cart: Cart_products = intent.getSerializableExtra("cart_food") as Cart_products
+
 //        var tag_cart = intent.getStringExtra("tag_cart")
 
-
         binding.selectedItemImg.setImageResource(food.img)
-        binding.namae.text = food.name
-        binding.price.text = binding.price.text.toString() + food.price
+            binding.namae.text = food.name
+            binding.price.text = binding.price.text.toString() + food.price
+
+
 
         binding.heartImage.setOnClickListener {
             if (!img_state) {

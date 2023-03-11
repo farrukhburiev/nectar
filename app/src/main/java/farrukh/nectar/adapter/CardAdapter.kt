@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import farrukh.nectar.R
 import farrukh.nectar.databinding.CartItemsBinding
-import farrukh.nectar.model.Cart_products
 import farrukh.nectar.model.Exclusive_Offer_products_child
 
-class CardAdapter(context: Context,var  items :MutableList<Cart_products>, var listener:CardAdapter.onchangeListner?) :
-    ArrayAdapter<Cart_products>(context, R.layout.cart_items) {
+class CardAdapter(
+    context: Context,
+    var items:MutableList<Exclusive_Offer_products_child>, var listener: onchangeListner
+) :
+    ArrayAdapter<Exclusive_Offer_products_child>(context, R.layout.cart_items) {
     override fun getCount(): Int {
         return  items.size
     }
@@ -40,7 +42,7 @@ class CardAdapter(context: Context,var  items :MutableList<Cart_products>, var l
     }
 
     interface onchangeListner{
-        fun onEdit(position: Int, item: Cart_products)
+        fun onEdit(position: Int, item: Exclusive_Offer_products_child)
     }
 
 }

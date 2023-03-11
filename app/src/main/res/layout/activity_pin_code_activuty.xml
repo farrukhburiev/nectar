@@ -101,13 +101,13 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/save_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="120dp"
         android:fontFamily="@font/gilroymedium"
-        android:text="Reenter Code"
+        android:text="Save password"
         android:textColor="#53B175"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

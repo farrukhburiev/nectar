@@ -27,6 +27,8 @@ class LanguageActivity : AppCompatActivity() {
         currentLanguage = intent.getStringExtra(currentLang).toString()
 
 
+
+
         val list = ArrayList<String>()
         list.add("Select Language")
         list.add("English")

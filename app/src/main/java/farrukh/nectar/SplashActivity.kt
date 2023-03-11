@@ -25,8 +25,15 @@ class SplashActivity : AppCompatActivity() {
         mini_text.startAnimation(mini_text_animation)
 
         Handler().postDelayed({
-            startActivity(Intent(this, LanguageActivity::class.java));
-            finish()
+            var sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
+            var s = sharedPreferences.getString("users","")
+            if (s != null){
+                startActivity(Intent(this,PinCodeActivuty::class.java))
+            }
+            else {
+                startActivity(Intent(this, RegistrationActivity::class.java));
+                finish()
+            }
         }, 4000)
 
 
