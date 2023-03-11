@@ -60,12 +60,7 @@ class PinCodeActivuty : AppCompatActivity() {
         next.setOnClickListener {
             if (new_password.text!!.length == 4 && confirm_password.text!!.length == 4){
                 if (new_password.text.toString().equals(confirm_password.text.toString())){
-
-
-
-                    val intent = Intent(this,RealPinCode::class.java)
-                    intent.putExtra("password",new_password.text.toString())
-                    startActivity(intent)
+                    startActivity(Intent(this,RealPinCode::class.java))
                 }
                 else Toast.makeText(this, "passwords are not equal", Toast.LENGTH_SHORT).show()
             }

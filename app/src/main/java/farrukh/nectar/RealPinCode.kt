@@ -12,10 +12,11 @@ class RealPinCode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_real_pin_code)
+        var sharedPreferences2 = getSharedPreferences("password", MODE_PRIVATE)
+        var pass = sharedPreferences2.getString("passwords","")
 
-        var password = intent.getStringExtra("password")
         firstPinView.addTextChangedListener {
-            if (firstPinView.text.toString() == password) {
+            if (pass.toString().contains(firstPinView.text.toString())) {
                 count = false
                 startActivity(Intent(this, MainActivity::class.java))
             }

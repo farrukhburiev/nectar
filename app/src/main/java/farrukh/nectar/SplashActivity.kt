@@ -26,19 +26,21 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             var sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
-            var s = sharedPreferences.getString("users","")
-            if (s != null){
-                startActivity(Intent(this,PinCodeActivuty::class.java))
-            }
-            else {
+            var sharedPreferences2 = getSharedPreferences("password", MODE_PRIVATE)
+            var s = ""
+            var sr = ""
+            s = sharedPreferences!!.getString("users", "").toString()
+            sr = sharedPreferences2!!.getString("passwords", "").toString()
+            if (s != "") {
+                if (sr != "") {
+                    startActivity(Intent(this, RealPinCode::class.java))
+                }
+                startActivity(Intent(this, PinCodeActivuty::class.java))
+            } else {
                 startActivity(Intent(this, RegistrationActivity::class.java));
                 finish()
             }
         }, 4000)
-
-
-        
-        
 
 
     }
